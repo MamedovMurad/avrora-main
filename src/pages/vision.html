@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- slider styles -->
+    <style>
+      .slick-dots {
+        position: absolute;
+        top: 50%;
+        right: -35px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      .slick-arrow {
+        border: 1px solid #00aced;
+        position: absolute;
+        bottom: -20px;
+        z-index: 10;
+        display: inline-block;
+        background: #00aced !important;
+        height: 55px;
+        width: 55px;
+        left: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slick-prev {
+        border: 1px solid #00aced;
+        background: #eeeeef !important;
+      }
+      .slick-next {
+        margin-left: 55px;
+        color: white;
+      }
+
+      .slick-dots > li {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        background: #007dcd;
+        cursor: pointer;
+      }
+      .slick-dots > li.slick-active {
+        cursor: default;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border: 2px solid #007dcd;
+      }
+    </style>
+  </head>
+  <body class="bg-background">
+    <!-- header area -->
+    <header class="pt-3">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <div><img src="../assets/images/logo.svg" alt="" /></div>
+          <div>
+            <ul class="flex gap-x-8 [&>li]:cursor-pointer">
+              <li class="text-sm font-semibold"><a>HAQQIMIZDA </a></li>
+              <li class="text-sm font-semibold"><a>İSTİQAMƏTLƏRİMİZ </a></li>
+              <li class="text-sm font-semibold"><a>BRENDLƏR </a></li>
+              <li class="text-sm font-semibold"><a>TƏRƏFDAŞLAR </a></li>
+              <li class="text-sm font-semibold"><a>KARYERA </a></li>
+              <li class="text-sm font-semibold"><a>MEDİA </a></li>
+              <li class="text-sm font-semibold"><a>LABAROTORİYA </a></li>
+              <li class="text-sm font-semibold"><a>ƏLAQƏ </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="flex justify-end gap-x-2">
+          <li class="text-main_color font-semibold text-xs">
+            <a href="">EN |</a>
+          </li>
+          <li class="text-main_color font-semibold text-xs">
+            <a href="">RU</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- header area -->
+
+    <main>
+      <section>
+        <div class="container mx-auto">
+          <div class="flex max-w-full mt-5 relative">
+            <div class="header_slider w-[96%] h-[587px]">
+              <div
+                class="bg-[url('../assets/images/slider.png')] h-[587px] bg-no-repeat bg-center bg-cover w-full"
+              >
+                <div class="w-[488px] h-[264px] bg-main_color p-10 mt-36">
+                  <h1 class="text-white text-5xl mb-4">Tarixçəmiz</h1>
+                  <p class="opacity-70 text-2xl text-white">
+                    Lorem ipsum dolor sit amet consectetur. Lectus consectetur
+                    tincidunt vulputate et ut diam.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[url('../assets/images/slider.png')] h-[587px] bg-no-repeat bg-center bg-cover w-full"
+              >
+                <div class="w-[488px] h-[264px] bg-main_color p-10 mt-36">
+                  <h1 class="text-white text-5xl mb-4">Tarixçəmiz</h1>
+                  <p class="opacity-70 text-2xl text-white">
+                    Lorem ipsum dolor sit amet consectetur. Lectus consectetur
+                    tincidunt vulputate et ut diam.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[url('../assets/images/slider.png')] h-[587px] bg-no-repeat bg-center bg-cover w-full"
+              >
+                <div class="w-[488px] h-[264px] bg-main_color p-10 mt-36">
+                  <h1 class="text-white text-5xl mb-4">Tarixçəmiz</h1>
+                  <p class="opacity-70 text-2xl text-white">
+                    Lorem ipsum dolor sit amet consectetur. Lectus consectetur
+                    tincidunt vulputate et ut diam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="h-[587px] w-12 bg-lightBlue relative"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto mt-20 mb-14">
+        <div class="grid-cols-3 grid gap-x-14">
+          <div class="col-span-1">
+            <h2 class="text-4xl font-bold">
+              Lorem ipsum dolor sit amet consectetur. Sed senectus diam lectus
+              vitae sagittis tempor pulvinar pharetra.
+            </h2>
+          </div>
+          <div class="col-span-2">
+            <p class="text-lg opacity-70">
+              Lorem ipsum dolor sit amet consectetur. Sed senectus diam lectus
+              vitae sagittis tempor pulvinar pharetra. Lacus quis ultrices in
+              habitant arcu risus. Dui enim etiam et pellentesque in. Curabitur
+              aliquam malesuada vitae tortor mi scelerisque tempor nisi.
+              Phasellus egestas faucibus sociis in turpis turpis adipiscing sit
+              at. Enim venenatis massa ornare auctor elit leo duis fringilla.
+              Enim dictum odio massa vitae purus. Sit et varius neque vitae.
+              Imperdiet egestas scelerisque urna faucibus massa aliquam. Ornare
+              in condimentum sit neque posuere amet ut at. Mauris morbi a
+              convallis semper pellentesque ut aliquet. Purus sed nulla
+              hendrerit vestibulum nunc non.Lorem ipsum dolor sit amet
+              consectetur. Sed senectus diam lectus vitae sagittis tempor
+              pulvinar pharetra. Lacus quis ultrices in habitant arcu risus. Dui
+              enim etiam et pellentesque in. Curabitur aliquam malesuada vitae
+              tortor mi scelerisque tempor nisi. Phasellus egestas faucibus
+              sociis in turpis turpis adipiscing sit at. Enim venenatis massa
+              ornare auctor elit leo duis fringilla. Enim dictum odio massa
+              vitae purus. Sit et varius neque vitae. Imperdiet egestas
+              scelerisque urna faucibus massa aliquam. Ornare in condimentum sit
+              neque posuere amet ut at. Mauris morbi a convallis semper
+              pellentesque ut aliquet. Purus sed nulla hendrerit vestibulum nunc
+              non.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto mb-14">
+        <div class="bg-main_color w-full] p-11 mb-14">
+          <h1 class="text-5xl font-bold text-white">Vizyonumuz</h1>
+        </div>
+
+        <div class="grid-cols-3 grid gap-x-14">
+          <div class="col-span-1">
+            <h2 class="text-4xl font-bold">
+              Lorem ipsum dolor sit amet consectetur. Sed senectus diam lectus
+              vitae sagittis tempor pulvinar pharetra.
+            </h2>
+          </div>
+          <div class="col-span-2">
+            <p class="text-lg opacity-70">
+              Lorem ipsum dolor sit amet consectetur. Sed senectus diam lectus
+              vitae sagittis tempor pulvinar pharetra. Lacus quis ultrices in
+              habitant arcu risus. Dui enim etiam et pellentesque in. Curabitur
+              aliquam malesuada vitae tortor mi scelerisque tempor nisi.
+              Phasellus egestas faucibus sociis in turpis turpis adipiscing sit
+              at. Enim venenatis massa ornare auctor elit leo duis fringilla.
+              Enim dictum odio massa vitae purus. Sit et varius neque vitae.
+              Imperdiet egestas scelerisque urna faucibus massa aliquam. Ornare
+              in condimentum sit neque posuere amet ut at. Mauris morbi a
+              convallis semper pellentesque ut aliquet. Purus sed nulla
+              hendrerit vestibulum nunc non.Lorem ipsum dolor sit amet
+              consectetur. Sed senectus diam lectus vitae sagittis tempor
+              pulvinar pharetra. Lacus quis ultrices in habitant arcu risus. Dui
+              enim etiam et pellentesque in. Curabitur aliquam malesuada vitae
+              tortor mi scelerisque tempor nisi. Phasellus egestas faucibus
+              sociis in turpis turpis adipiscing sit at. Enim venenatis massa
+              ornare auctor elit leo duis fringilla. Enim dictum odio massa
+              vitae purus. Sit et varius neque vitae. Imperdiet egestas
+              scelerisque urna faucibus massa aliquam. Ornare in condimentum sit
+              neque posuere amet ut at. Mauris morbi a convallis semper
+              pellentesque ut aliquet. Purus sed nulla hendrerit vestibulum nunc
+              non.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#eeeeef",
+              main_color: "#007dcd",
+              secondaryBlue: "#0081b2",
+              lightBlue: "#00ACED",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header_slider").slick({
+          "setting-name": "setting - value",
+          dots: true,
+        });
+
+        $(".slick-prev").html(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none">
+<path d="M12.4632 1.08956e-06L0.731621 11.2628L-1.04907e-06 12L0.732688 12.7372L12.4642 24L14 22.5256L3.03207 12L13.9957 1.4744L12.4632 1.08956e-06Z" fill="#00ACED"/>
+</svg>`);
+        $(".slick-next").html(`
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none">
+<path d="M1.53683 1.08956e-06L13.2684 11.2628L14 12L13.2673 12.7372L1.53577 24L6.19016e-08 22.5256L10.9679 12L0.00426591 1.4744L1.53683 1.08956e-06Z" fill="white"/>
+</svg>`);
+      });
+    </script>
+  </body>
+</html>

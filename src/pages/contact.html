@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../global.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-background">
+    <!-- header area -->
+    <header class="pt-3 mb-3 md:block hidden">
+      <div class="container mx-auto">
+        <nav class="flex justify-between items-center">
+          <div><img src="/src/assets/images/logo.svg" alt="" /></div>
+          <div>
+            <ul class="flex gap-x-8 [&>li]:cursor-pointer">
+              <li class="text-sm font-semibold"><a>HAQQIMIZDA </a></li>
+              <li class="text-sm font-semibold"><a>İSTİQAMƏTLƏRİMİZ </a></li>
+              <li class="text-sm font-semibold"><a>BRENDLƏR </a></li>
+              <li class="text-sm font-semibold"><a>TƏRƏFDAŞLAR </a></li>
+              <li class="text-sm font-semibold"><a>KARYERA </a></li>
+              <li class="text-sm font-semibold"><a>MEDİA </a></li>
+              <li class="text-sm font-semibold"><a>LABAROTORİYA </a></li>
+              <li class="text-sm font-semibold"><a>ƏLAQƏ </a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="flex justify-end gap-x-2 mt-5">
+          <li class="text-main_color font-semibold text-xs">
+            <a href="">EN |</a>
+          </li>
+          <li class="text-main_color font-semibold text-xs">
+            <a href="">RU</a>
+          </li>
+        </ul>
+        <ul class="flex items-center gap-x-2 mt-3">
+          <li class="text-xs font-bold cursor-pointer">AVRORA</li>
+          <span><img src="/src//assets//images//arrow.svg" alt="" /> </span>
+          <li class="text-secondaryBlue text-xs cursor-pointer">
+            İnsan resursları
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- header area -->
+    <!-- mobile header -->
+    <header class="md:hidden block h-[106px]">
+      <div class="container mx-auto h-full">
+        <div class="h-full">
+          <img src="/src/assets/images/logo.svg" alt="" class="h-full" />
+        </div>
+      </div>
+    </header>
+    <!-- mobile header -->
+    <main>
+      <section class="container mx-auto">
+        <div class="flex">
+          <div class="w-1/3">
+            <div class="bg-main_color px-10 py-14">
+              <h1 class="font-bold text-5xl text-white">Əlaqə</h1>
+            </div>
+            <div class="mt-14">
+              <ul class="flex flex-col gap-y-10">
+                <li>
+                  <h5 class="font-bold text-xl">Qaynar xəttimiz:</h5>
+                  <p class="opacity-70 text-xl mt-2">*0100</p>
+                </li>
+                <li>
+                  <h5 class="font-bold text-xl">Əlaqə:</h5>
+                  <p class="opacity-70 text-xl mt-2">(+994) 55 607 72 79</p>
+                </li>
+                <li>
+                  <h5 class="font-bold text-xl">Ünvan:</h5>
+                  <p class="opacity-70 text-xl mt-2 max-w-[70%]">
+                    Azərbaycan Respublikası, Bakı ş., Aşıq Molla Cümə küçəsi,
+                    46C
+                  </p>
+                </li>
+
+                <li>
+                  <h5 class="font-bold text-xl">Email:</h5>
+                  <p class="opacity-70 text-xl mt-2 max-w-[70%]">
+                    <strong class="mr-1">Marketinq:</strong> marketing@avrora.az
+                  </p>
+                  <p class="opacity-70 text-xl mt-2 max-w-[70%]">
+                    <strong class="mr-1">Şatış:</strong> marketing@avrora.az
+                  </p>
+                  <p class="opacity-70 text-xl mt-2 max-w-[70%]">
+                    <strong class="mr-1"> İxrac:</strong> marketing@avrora.az
+                  </p>
+                  <p class="opacity-70 text-xl mt-2 max-w-[70%]">
+                    <strong class="mr-1">Ofis:</strong> marketing@avrora.az
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-2/3">
+            <div class="bg-white p-8 h-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus"
+                class="w-full h-full"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-4">
+      <div class="container mx-auto">
+        <p class="text-sm">
+          BÜTÜN HÜQUQLAR QORUNUR.
+          <span class="text-main_color">AVRORA GROUP.</span> 2020
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#eeeeef",
+              main_color: "#007dcd",
+              secondaryBlue: "#0081b2",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>

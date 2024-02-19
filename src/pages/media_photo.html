@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- slider styles -->
+
+    <style>
+      .slick-arrow {
+        border: 1px solid #00aced;
+        position: absolute;
+        top: 6px;
+        z-index: 10;
+        display: inline-block;
+        background: #00aced !important;
+        height: 55px;
+        width: 55px;
+        right: -15.5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slick-prev {
+        border: 1px solid #00aced;
+        background: #eeeeef !important;
+      }
+      .slick-next {
+        right: -19.5%;
+        color: white;
+      }
+      .is-active {
+        border: 2px solid #007dcd;
+        background-image: url("../assets/images/slider.png") !important;
+      }
+      .slider-nav .slick-slide {
+        width: 131px !important;
+      }
+      .lastActive {
+        background-image: linear-gradient(
+            -90deg,
+            #fff 0%,
+            rgba(252, 252, 252, 0.315) 100%
+          ),
+          url("../assets/images/slider.png") !important;
+      }
+
+      .slick-dots > li {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        background: #007dcd;
+        cursor: pointer;
+      }
+      .slick-dots > li.slick-active {
+        cursor: default;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border: 2px solid #007dcd;
+      }
+
+      .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 25px;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body class="bg-background">
+    <!-- header area -->
+    <header class="pt-3">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <div><img src="../assets/images/logo.svg" alt="" /></div>
+          <div>
+            <ul class="flex gap-x-8 [&>li]:cursor-pointer">
+              <li class="text-sm font-semibold"><a>HAQQIMIZDA </a></li>
+              <li class="text-sm font-semibold"><a>İSTİQAMƏTLƏRİMİZ </a></li>
+              <li class="text-sm font-semibold"><a>BRENDLƏR </a></li>
+              <li class="text-sm font-semibold"><a>TƏRƏFDAŞLAR </a></li>
+              <li class="text-sm font-semibold"><a>KARYERA </a></li>
+              <li class="text-sm font-semibold"><a>MEDİA </a></li>
+              <li class="text-sm font-semibold"><a>LABAROTORİYA </a></li>
+              <li class="text-sm font-semibold"><a>ƏLAQƏ </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="flex justify-end gap-x-2">
+          <li class="text-main_color font-semibold text-xs">
+            <a href="">EN |</a>
+          </li>
+          <li class="text-main_color font-semibold text-xs">
+            <a href="">RU</a>
+          </li>
+        </ul>
+        <ul class="flex items-center gap-x-2 mt-3">
+          <li class="text-xs font-bold cursor-pointer">AVRORA</li>
+          <span><img src="/src//assets//images//arrow.svg" alt="" /> </span>
+          <li class="text-secondaryBlue text-xs cursor-pointer">
+            İnsan resursları
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- header area -->
+
+    <main class="mb-20">
+      <section class="container mx-auto mt-10 mb-14">
+        <div
+          class="bg-main_color px-10 h-[156px] w-[388px] flex flex-col justify-center"
+        >
+          <h1 class="text-white text-5xl font-bold">Foto galereya</h1>
+        </div>
+      </section>
+
+      <section class="container mx-auto">
+        <div>
+          <div class="slider slider-single w-full h-[668px]">
+            <div
+              class="h-[668px] bg-[url('../assets/images/slider.png')] bg-no-repeat bg-cover"
+            ></div>
+            <div
+              class="h-[668px] bg-[url('../assets/images/slider.png')] bg-no-repeat bg-cover"
+            ></div>
+            <div
+              class="h-[668px] bg-[url('../assets/images/slider.png')] bg-no-repeat bg-cover"
+            ></div>
+            <div
+              class="h-[668px] bg-[url('../assets/images/slider.png')] bg-no-repeat bg-cover"
+            ></div>
+            <div
+              class="h-[668px] bg-[url('../assets/images/slider.png')] bg-no-repeat bg-cover"
+            ></div>
+          </div>
+
+          <div class="slider slider-nav mt-3 w-[83.5%]">
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+            <div
+              class="h-[76px] w-[131px] bg-no-repeat bg-cover mr-3"
+              style="
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  ),
+                  url('../assets/images/slider.png');
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#eeeeef",
+              main_color: "#007dcd",
+              secondaryBlue: "#0081b2",
+              lightBlue: "#00ACED",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script>
+      $(".slider-single").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        adaptiveHeight: true,
+        infinite: false,
+        useTransform: true,
+        speed: 400,
+        cssEase: "cubic-bezier(0.77, 0, 0.18, 1)",
+      });
+
+      $(".slider-nav")
+        .on("init", function (event, slick) {
+          $(".slider-nav .slick-slide.slick-current").addClass("is-active");
+        })
+
+        .slick({
+          slidesToShow: 9,
+          slidesToScroll: 5,
+          dots: true,
+          focusOnSelect: false,
+          infinite: false,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+              },
+            },
+            {
+              breakpoint: 640,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+              },
+            },
+            {
+              breakpoint: 420,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              },
+            },
+          ],
+        });
+
+      $(".slider-single").on(
+        "afterChange",
+        function (event, slick, currentSlide) {
+          $(".slider-nav").slick("slickGoTo", currentSlide);
+          var currrentNavSlideElem =
+            '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+          $(".slider-nav .slick-slide.is-active").removeClass("is-active");
+          $(currrentNavSlideElem).addClass("is-active");
+        }
+      );
+
+      $(".slider-nav").on("click", ".slick-slide", function (event) {
+        event.preventDefault();
+        var goToSingleSlide = $(this).data("slick-index");
+
+        $(".slider-single").slick("slickGoTo", goToSingleSlide);
+      });
+      $("body").on("click", ".slick-arrow", function () {
+        document
+          .getElementsByClassName("lastActive")[0]
+          .classList.remove("lastActive");
+
+        $(".slider-nav .slick-track .slick-active")[
+          $(".slider-nav .slick-track .slick-active").length - 1
+        ].classList.add("lastActive");
+      });
+      $(".slick-prev").html(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none">
+<path d="M12.4632 1.08956e-06L0.731621 11.2628L-1.04907e-06 12L0.732688 12.7372L12.4642 24L14 22.5256L3.03207 12L13.9957 1.4744L12.4632 1.08956e-06Z" fill="#00ACED"/>
+</svg>`);
+      $(".slick-next").html(`
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none">
+<path d="M1.53683 1.08956e-06L13.2684 11.2628L14 12L13.2673 12.7372L1.53577 24L6.19016e-08 22.5256L10.9679 12L0.00426591 1.4744L1.53683 1.08956e-06Z" fill="white"/>
+</svg>`);
+      console.log(
+        $(".slider-nav .slick-track .slick-active")[
+          $(".slider-nav .slick-track .slick-active").length - 1
+        ].classList.add("lastActive")
+      );
+    </script>
+  </body>
+</html>
