@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- slider styles -->
+    <style>
+      .slick-dots {
+        position: absolute;
+        top: 50%;
+        right: -35px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      .slick-arrow {
+        border: 1px solid #00aced;
+        position: absolute;
+        bottom: -20px;
+        z-index: 10;
+        display: inline-block;
+        background: #00aced !important;
+        height: 55px;
+        width: 55px;
+        left: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slick-prev {
+        border: 1px solid #00aced;
+        background: #eeeeef !important;
+      }
+      .slick-next {
+        margin-left: 55px;
+        color: white;
+      }
+
+      .slick-dots > li {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        background: #007dcd;
+        cursor: pointer;
+      }
+      .slick-dots > li.slick-active {
+        cursor: default;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border: 2px solid #007dcd;
+      }
+    </style>
+  </head>
+  <body class="bg-background">
+   <!-- header area -->
+   <header class="pt-4 md:bg-none bg-background px-5 md:px-0">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+        <div>
+          <img
+            src="../assets/images/logo.svg"
+            alt=""
+            class="w-[154px] md:w-full"
+          />
+        </div>
+
+        <div class="hidden lg:block">
+          <ul class="flex gap-x-8 [&>li]:cursor-pointer">
+            <li class="text-sm font-semibold relative group cursor-pointer">
+              <span class="flex items-center gap-x-1">
+                <a
+                  class="menu-hover group-hover:text-main_color font-semibold"
+                  >HAQQIMIZDA
+                </a>
+                <svg
+                  class="group-hover:rotate-90 transition-all"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="7"
+                  height="10"
+                  viewBox="0 0 7 10"
+                  fill="none"
+                >
+                  <path
+                    d="M2 8L5 5L2 2"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                    class="group-hover:stroke-main_color stroke-black"
+                  />
+                </svg>
+              </span>
+
+              <ul
+                class="invisible absolute z-50 -left-6 flex w-full flex-col bg-background p-4 group-hover:visible gap-y-4 min-w-36 text-xs"
+                onClick=""
+              >
+                <li class="hover:text-main_color">
+                  <a href="">Tarixçəmiz</a>
+                </li>
+                <li class="hover:text-main_color">
+                  <a href="">İdarə heyyəti</a>
+                </li>
+                <li class="hover:text-main_color">
+                  <a href="">Şirkət rəhbəri</a>
+                </li>
+                <li class="hover:text-main_color">
+                  <a href="">Təsisçinin mesajı</a>
+                </li>
+                <li class="hover:text-main_color">
+                  <a href="">Missiyamız</a>
+                </li>
+              </ul>
+            </li>
+            <li class="text-sm font-semibold"><a>İSTİQAMƏTLƏRİMİZ </a></li>
+            <li class="text-sm font-semibold"><a>BRENDLƏR </a></li>
+            <li class="text-sm font-semibold"><a>TƏRƏFDAŞLAR </a></li>
+            <li class="text-sm font-semibold"><a>KARYERA </a></li>
+            <li class="text-sm font-semibold"><a>MEDİA </a></li>
+            <li class="text-sm font-semibold"><a>LABAROTORİYA </a></li>
+            <li class="text-sm font-semibold"><a>ƏLAQƏ </a></li>
+          </ul>
+        </div>
+        <!-- mobile header -->
+
+        <div
+          id="burgerMenu"
+          class="fixed top-0 left-0 w-full bg-main_color h-full z-30 p-6 hidden md:hidden"
+        >
+          <div class="flex justify-between">
+            <ul class="flex items-center gap-x-3">
+              <li class="text-white"><a href="">EN </a></li>
+              <li><span>|</span></li>
+              <li class="text-white"><a href="">RU </a></li>
+            </ul>
+            <div class="cursor-pointer" id="cancel">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="24"
+                viewBox="0 0 23 24"
+                fill="none"
+              >
+                <path
+                  d="M13.396 11.6562L22.9307 0.618367C23.0905 0.434931 22.9561 0.15625 22.7091 0.15625H19.8106C19.6399 0.15625 19.4764 0.23033 19.3638 0.357323L11.5 9.46208L3.63618 0.357323C3.52721 0.23033 3.36376 0.15625 3.18941 0.15625H0.290871C0.0438782 0.15625 -0.0905154 0.434931 0.0693037 0.618367L9.60397 11.6562L0.0693037 22.6941C0.0335028 22.735 0.0105351 22.785 0.00312665 22.8382C-0.00428181 22.8914 0.00418011 22.9455 0.0275087 22.9942C0.0508372 23.0428 0.0880525 23.084 0.134735 23.1127C0.181418 23.1414 0.235608 23.1565 0.290871 23.1562H3.18941C3.36012 23.1562 3.52358 23.0822 3.63618 22.9552L11.5 13.8504L19.3638 22.9552C19.4728 23.0822 19.6362 23.1562 19.8106 23.1562H22.7091C22.9561 23.1562 23.0905 22.8776 22.9307 22.6941L13.396 11.6562Z"
+                  fill="white"
+                  fill-opacity="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="mt-6">
+            <ul>
+              <li onclick="accardion(this)">
+                <div class="flex justify-between items-center">
+                  <h5 class="text-white font-semibold text-2xl">
+                    HAQQIMIZDA
+                  </h5>
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="19"
+                      viewBox="0 0 12 19"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 17.1562L10 9.65625L2 2.15625"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <ul
+                  style="background: rgba(255, 255, 255, 0.15)"
+                  class="flex-col gap-y-7 p-5 mt-1 hidden accardion_list"
+                >
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-8" onclick="accardion(this)">
+                <div class="flex justify-between items-center">
+                  <h5 class="text-white font-semibold text-2xl">
+                    HAQQIMIZDA
+                  </h5>
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="19"
+                      viewBox="0 0 12 19"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 17.1562L10 9.65625L2 2.15625"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <ul
+                  style="background: rgba(255, 255, 255, 0.15)"
+                  class="flex-col gap-y-7 p-5 mt-1 hidden accardion_list"
+                >
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                  <li>
+                    <a href="" class="text-lg text-white">Tarixçəmiz</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-8">
+                <div class="flex justify-between items-center">
+                  <h5 class="text-white font-semibold text-2xl">
+                    İSTİQAMƏTLƏRİMİZ
+                  </h5>
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="19"
+                      viewBox="0 0 12 19"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 17.1562L10 9.65625L2 2.15625"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </li>
+              <li class="mt-8">
+                <div class="flex justify-between items-center">
+                  <h5 class="text-white font-semibold text-2xl">BRENDLƏR</h5>
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="19"
+                      viewBox="0 0 12 19"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 17.1562L10 9.65625L2 2.15625"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </li>
+              <li class="mt-8">
+                <div class="flex justify-between items-center">
+                  <h5 class="text-white font-semibold text-2xl">
+                    TƏRƏFDAŞLAR
+                  </h5>
+
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="19"
+                      viewBox="0 0 12 19"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 17.1562L10 9.65625L2 2.15625"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="logo_burger" class="block md:hidden cursor-pointer">
+          <img src="../assets/images/burger.svg" alt="" />
+        </div>
+      </div>
+
+      <ul class="md:flex justify-end gap-x-2 hidden">
+        <li class="text-main_color font-semibold text-xs">
+          <a href="">EN |</a>
+        </li>
+        <li class="text-main_color font-semibold text-xs">
+          <a href="">RU</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- header area -->
+
+    <main>
+      <section>
+        <div class="container mx-auto">
+          <div class="flex max-w-full mt-5 relative">
+            <div class="header_slider w-[96%] h-[587px]">
+              <div
+                class="bg-[url('../assets/images/slider.png')] h-[587px] bg-no-repeat bg-center bg-cover w-full"
+              >
+                <div class="w-[488px] h-[264px] bg-main_color p-10 mt-36">
+                  <h1 class="text-white text-5xl mb-4">Tarixçəmiz</h1>
+                  <p class="opacity-70 text-2xl text-white">
+                    Lorem ipsum dolor sit amet consectetur. Lectus consectetur
+                    tincidunt vulputate et ut diam.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[url('../assets/images/slider.png')] h-[587px] bg-no-repeat bg-center bg-cover w-full"
+              >
+                <div class="w-[488px] h-[264px] bg-main_color p-10 mt-36">
+                  <h1 class="text-white text-5xl mb-4">Tarixçəmiz</h1>
+                  <p class="opacity-70 text-2xl text-white">
+                    Lorem ipsum dolor sit amet consectetur. Lectus consectetur
+                    tincidunt vulputate et ut diam.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[url('../assets/images/slider.png')] h-[587px] bg-no-repeat bg-center bg-cover w-full"
+              >
+                <div class="w-[488px] h-[264px] bg-main_color p-10 mt-36">
+                  <h1 class="text-white text-5xl mb-4">Tarixçəmiz</h1>
+                  <p class="opacity-70 text-2xl text-white">
+                    Lorem ipsum dolor sit amet consectetur. Lectus consectetur
+                    tincidunt vulputate et ut diam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="h-[587px] w-12 bg-lightBlue relative"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto mt-20 mb-14">
+        <div class="grid-cols-3 grid gap-x-14">
+          <div class="col-span-1">
+            <h2 class="text-4xl font-bold">
+              Lorem ipsum dolor sit amet consectetur. Sed senectus diam lectus
+              vitae sagittis tempor pulvinar pharetra.
+            </h2>
+          </div>
+          <div class="col-span-2">
+            <p class="text-lg opacity-70">
+              Lorem ipsum dolor sit amet consectetur. Sed senectus diam lectus
+              vitae sagittis tempor pulvinar pharetra. Lacus quis ultrices in
+              habitant arcu risus. Dui enim etiam et pellentesque in. Curabitur
+              aliquam malesuada vitae tortor mi scelerisque tempor nisi.
+              Phasellus egestas faucibus sociis in turpis turpis adipiscing sit
+              at. Enim venenatis massa ornare auctor elit leo duis fringilla.
+              Enim dictum odio massa vitae purus. Sit et varius neque vitae.
+              Imperdiet egestas scelerisque urna faucibus massa aliquam. Ornare
+              in condimentum sit neque posuere amet ut at. Mauris morbi a
+              convallis semper pellentesque ut aliquet. Purus sed nulla
+              hendrerit vestibulum nunc non.Lorem ipsum dolor sit amet
+              consectetur. Sed senectus diam lectus vitae sagittis tempor
+              pulvinar pharetra. Lacus quis ultrices in habitant arcu risus. Dui
+              enim etiam et pellentesque in. Curabitur aliquam malesuada vitae
+              tortor mi scelerisque tempor nisi. Phasellus egestas faucibus
+              sociis in turpis turpis adipiscing sit at. Enim venenatis massa
+              ornare auctor elit leo duis fringilla. Enim dictum odio massa
+              vitae purus. Sit et varius neque vitae. Imperdiet egestas
+              scelerisque urna faucibus massa aliquam. Ornare in condimentum sit
+              neque posuere amet ut at. Mauris morbi a convallis semper
+              pellentesque ut aliquet. Purus sed nulla hendrerit vestibulum nunc
+              non.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto mb-14">
+     <div><h1 class=" text-main_color font-bold text-5xl">Dəyərlərimiz</h1></div>
+     <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+<div class=" bg-white shadow-lg w-full p-5 ">
+    <div class="mb-5">
+        <img src="../assets/images/values.svg" alt="">
+    </div>
+    <p class=" text-xl font-medium">Brendlərin inkişafı və müştəri loyallığının formalaşdırılması sahəsində geniş təcrübəsi olan güclü marketinq və PR departamentimiz var;</p>
+</div>
+<div class=" bg-white shadow-lg w-full p-5 ">
+    <div class="mb-5">
+        <img src="../assets/images/values.svg" alt="">
+    </div>
+    <p class=" text-xl font-medium">Brendlərin inkişafı və müştəri loyallığının formalaşdırılması sahəsində geniş təcrübəsi olan güclü marketinq və PR departamentimiz var;</p>
+</div>
+<div class=" bg-white shadow-lg w-full p-5 ">
+    <div class="mb-5">
+        <img src="../assets/images/values.svg" alt="">
+    </div>
+    <p class=" text-xl font-medium">Brendlərin inkişafı və müştəri loyallığının formalaşdırılması sahəsində geniş təcrübəsi olan güclü marketinq və PR departamentimiz var;</p>
+</div>
+<div class=" bg-white shadow-lg w-full p-5 ">
+    <div class="mb-5">
+        <img src="../assets/images/values.svg" alt="">
+    </div>
+    <p class=" text-xl font-medium">Brendlərin inkişafı və müştəri loyallığının formalaşdırılması sahəsində geniş təcrübəsi olan güclü marketinq və PR departamentimiz var;</p>
+</div>
+<div class=" bg-white shadow-lg w-full p-5 ">
+    <div class="mb-5">
+        <img src="../assets/images/values.svg" alt="">
+    </div>
+    <p class=" text-xl font-medium">Brendlərin inkişafı və müştəri loyallığının formalaşdırılması sahəsində geniş təcrübəsi olan güclü marketinq və PR departamentimiz var;</p>
+</div>
+     </div>
+      </section>
+    </main>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#eeeeef",
+              main_color: "#007dcd",
+              secondaryBlue: "#0081b2",
+              lightBlue: "#00ACED",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+        $("#logo_burger").on("click", function () {
+          $("#burgerMenu").addClass("block").removeClass("hidden");
+        });
+        $("#cancel").on("click", function () {
+          $("#burgerMenu").addClass("hidden").removeClass("block");
+        });
+        function accardion(params) {
+          $(".accardion_list").addClass("hidden").removeClass("flex");
+          $(params).find("ul").removeClass("hidden").addClass("flex");
+        }
+      </script>
+    <script>
+      $(document).ready(function () {
+        $(".header_slider").slick({
+          "setting-name": "setting - value",
+          dots: true,
+        });
+
+        $(".slick-prev").html(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none">
+<path d="M12.4632 1.08956e-06L0.731621 11.2628L-1.04907e-06 12L0.732688 12.7372L12.4642 24L14 22.5256L3.03207 12L13.9957 1.4744L12.4632 1.08956e-06Z" fill="#00ACED"/>
+</svg>`);
+        $(".slick-next").html(`
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none">
+<path d="M1.53683 1.08956e-06L13.2684 11.2628L14 12L13.2673 12.7372L1.53577 24L6.19016e-08 22.5256L10.9679 12L0.00426591 1.4744L1.53683 1.08956e-06Z" fill="white"/>
+</svg>`);
+      });
+    </script>
+  </body>
+</html>
